@@ -1,0 +1,1303 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>Portfolio</title>
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- FontAwesome -->
+
+    <script src="https://kit.fontawesome.com/d34125b423.js"
+            crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rosarivo:ital@0;1&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+
+    <link href="styles.css"
+          rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- =========================================
+         NAV
+    ========================================= -->
+
+    <nav class="navbar navbar-dark fixed-top">
+
+      <div class="menu-shell">
+
+        <!-- HAMBURGER -->
+
+        <input type="checkbox"
+               id="menu-toggle">
+
+        <!-- SOCIAL ICONS -->
+
+        <div class="social-icons">
+
+          <label for="menu-toggle"
+                 class="hamburger"
+                 aria-label="Open menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+          </label>
+
+          <a href="https://www.instagram.com/powelljo.99/">
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/jacksonpowell-design/">
+            <i class="bi bi-linkedin"></i>
+          </a>
+
+          <a href="https://jopowelldesign.itch.io">
+            <i class="fa-brands fa-itch-io"
+               style="color: #dce8f2; font-size: 1.6rem;">
+            </i>
+          </a>
+
+        </div>
+
+        <!-- OVERLAY -->
+
+        <label for="menu-toggle"
+               class="menu-overlay"></label>
+
+        <!-- MENU -->
+
+        <nav class="menu-panel">
+
+          <a href="index.html"
+             class="nav-link py-2">
+            Home
+          </a>
+
+          <a href="portfolio.html"
+             class="nav-link py-2">
+            Portfolio
+          </a>
+
+          <a href="about.html" class="nav-link py-2">
+            About Me</a>
+
+          <a href="contact.html"
+             class="nav-link py-2">
+            Contact
+          </a>
+
+        </nav>
+
+      </div>
+
+    </nav>
+
+    <!-- =========================================
+         PAGE WRAPPER
+    ========================================= -->
+
+    <article class="scroll-wrapper">
+
+      <!-- =========================================
+           HERO
+      ========================================= -->
+
+    <section class="scroll-section hero-section portfolio-hero theme-light">
+
+      <!-- HERO IMAGE -->
+      <div class="hero-image">
+
+        <img src="images/portfolio-hero.png"
+             alt="Portfolio hero image">
+
+      </div>
+
+      <!-- CONTENT -->
+      <div class="hero-content portfolio-content fade-in">
+
+        <p class="eyebrow">
+          Selected Projects
+        </p>
+
+        <h1 class="page-title">
+          Portfolio
+        </h1>
+
+        <p class="hero-copy">
+          A curated selection of present and past creative work.
+        </p>
+
+      </div>
+
+      <div class="scroll-indicator down">
+          <i class="bi bi-chevron-down"></i>
+      </div>
+
+      <div class="section-divider divider-blue"></div>
+
+    </section>
+
+      <!-- =========================================
+           PRESENT WORK
+      ========================================= -->
+
+      <section class="scroll-section present-section theme-dark">
+
+        <div class="present-layout fade-in">
+
+          <!-- LEFT -->
+
+          <div class="project-info">
+
+            <p class="section-label">
+              Present Work
+            </p>
+
+            <h2 id="project-title">
+
+            </h2>
+
+            <p id="project-description">
+
+            </p>
+
+            <div class="project-meta">
+
+              <h3>
+                Skills & Notes
+              </h3>
+
+              <ul id="project-skills">
+
+              </ul>
+
+            </div>
+
+            <div class="project-meta">
+
+              <h3>
+                Tools Used
+              </h3>
+
+              <ul id="project-tools">
+
+              </ul>
+
+            </div>
+
+          </div>
+
+          <!-- RIGHT -->
+
+          <div class="project-viewer">
+
+            <!-- LEFT ARROW -->
+
+            <button class="nav-arrow prev">
+
+              <i class="bi bi-arrow-left"></i>
+
+            </button>
+
+            <!-- FEATURED MEDIA -->
+
+            <div class="image-frame">
+
+              <!-- VIDEO -->
+
+              <video id="featured-video"
+                     autoplay
+                     muted
+                     loop
+                     playsinline>
+
+                <source src="videos/active-project-hero.webm"
+                        type="video/webm">
+
+              </video>
+
+              <!-- IMAGE -->
+
+              <img id="featured-image"
+                   src="images/project2.jpg"
+                   alt="Project image">
+
+            </div>
+
+            <!-- RIGHT ARROW -->
+
+            <button class="nav-arrow next">
+
+              <i class="bi bi-arrow-right"></i>
+
+            </button>
+
+            <!-- FOOTER -->
+
+            <div class="viewer-footer">
+
+              <!-- THUMBNAILS -->
+
+              <div class="thumbnail-row">
+
+                <img class="thumb active"
+                     src="images/thumb-video.png"
+                     alt="Gameplay preview">
+
+                <img class="thumb"
+                     src="images/active-project-b.png"
+                     alt="Project screenshot">
+
+                <img class="thumb"
+                     src="images/active-project-c.png"
+                     alt="Project screenshot">
+
+                <img class="thumb"
+                     src="images/active-project-d.png"
+                     alt="Project screenshot">
+
+              </div>
+
+              <!-- ITCH BUTTON -->
+
+              <a href="https://yourgame.itch.io/yourgame"
+                 target="_blank"
+                 class="itch-button">
+
+                <i class="fa-brands fa-itch-io"></i>
+
+                <span>
+                  Visit on Itch.io
+                </span>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="scroll-indicator up">
+          <i class="bi bi-chevron-up"></i>
+        </div>
+
+        <div class="scroll-indicator down">
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <div class="section-divider divider-light"></div>
+
+      </section>
+
+      <!-- =========================================
+           PAST WORK
+      ========================================= -->
+
+      <section class="scroll-section past-section theme-light">
+
+        <div class="past-inner fade-in">
+
+          <div class="past-header">
+
+            <p class="section-label">
+              Archive
+            </p>
+
+            <h2 class="section-title">
+              Past Work
+            </h2>
+
+          </div>
+
+          <div class="past-grid">
+
+            <!-- CARD -->
+
+            <article class="past-card">
+
+              <img src="images/work1.png"
+                   alt="Past project">
+
+              <div class="card-overlay">
+
+                <!-- TYPE -->
+
+                <span class="project-tag game">
+                  Game
+                </span>
+
+                <h3>
+                  Star Protocol
+                </h3>
+
+                <a href="https://yourgame.itch.io/yourgame"
+                   target="_blank"
+                   class="archive-button">
+
+                  <i class="fa-brands fa-itch-io"></i>
+
+                  <span>
+                    Play on Itch.io
+                  </span>
+
+                </a>
+
+              </div>
+
+            </article>
+
+            <!-- CARD -->
+
+            <article class="past-card">
+
+              <img src="images/work2.png"
+                   alt="Past project">
+
+              <div class="card-overlay">
+
+                <!-- TYPE -->
+
+                <span class="project-tag playable-demo">
+                  Demo
+                </span>
+
+                <h3>
+                  Interactive Menu
+                </h3>
+
+                <a href="https://yourgame.itch.io/yourgame"
+                   target="_blank"
+                   class="archive-button">
+
+                  <i class="fa-brands fa-itch-io"></i>
+
+                  <span>
+                    View on Itch.io
+                  </span>
+
+                </a>
+
+              </div>
+
+            </article>
+
+            <!-- CARD -->
+
+            <article class="past-card">
+
+              <img src="images/work3.png"
+                   alt="Past project">
+
+              <div class="card-overlay">
+
+                <!-- TYPE -->
+
+                <span class="project-tag game">
+                  Game
+                </span>
+
+                <h3>
+                  Beat the Clock!
+                </h3>
+
+                <a href="https://yourgame.itch.io/yourgame"
+                   target="_blank"
+                   class="archive-button">
+
+                  <i class="fa-brands fa-itch-io"></i>
+
+                  <span>
+                    Play on Itch.io
+                  </span>
+
+                </a>
+
+              </div>
+
+            </article>
+
+            <article class="past-card showcase-card">
+
+              <img src="images/showcase-thumb.png"
+                   alt="Artwork showcase">
+
+              <div class="card-overlay">
+
+                <span class="project-tag showcase">
+                  Showcase
+                </span>
+
+                <h3>
+                  Foldable Chair Prototype Renders
+                </h3>
+
+                <button class="archive-button open-gallery"
+                        data-gallery="env-gallery">
+
+                  <i class="bi bi-images"></i>
+
+                  <span>
+                    View Gallery
+                  </span>
+
+                </button>
+
+              </div>
+
+            </article>
+
+            <!-- CARD -->
+
+            <article class="past-card">
+
+              <img src="images/work4.png"
+                   alt="Past project">
+
+              <div class="card-overlay">
+
+                <!-- TYPE -->
+
+                <span class="project-tag game">
+                  Game
+                </span>
+
+                <h3>
+                  RECLAIM
+                </h3>
+
+                <a href="https://yourgame.itch.io/yourgame"
+                   target="_blank"
+                   class="archive-button">
+
+                  <i class="fa-brands fa-itch-io"></i>
+
+                  <span>
+                    Play on Itch.io
+                  </span>
+
+                </a>
+
+              </div>
+
+            </article>
+
+            <article class="past-card showcase-card">
+
+              <img src="images/showcase-b-thumb.png"
+                   alt="Artwork showcase">
+
+              <div class="card-overlay">
+
+                <span class="project-tag showcase">
+                  Showcase
+                </span>
+
+                <h3>
+                  ActiveLec Prototype Renders
+                </h3>
+
+                <button class="archive-button open-gallery"
+                        data-gallery="lec-gallery">
+
+                  <i class="bi bi-images"></i>
+
+                  <span>
+                    View Gallery
+                  </span>
+
+                </button>
+
+              </div>
+
+            </article>
+
+            <article class="past-card">
+
+              <img src="images/work6.png"
+                   alt="Past project">
+
+              <div class="card-overlay">
+
+                <span class="project-tag video">
+                  Video
+                </span>
+
+                <h3>
+                 Robot Animation Reel
+                </h3>
+
+                <a href="https://drive.google.com/..."
+                   target="_blank"
+                   class="archive-button">
+
+                  <i class="bi bi-play-circle"></i>
+
+                  <span>
+                    Watch Video
+                  </span>
+
+                </a>
+
+              </div>
+
+            </article>
+
+             <article class="past-card showcase-card">
+
+              <img src="images/showcase-c-thumb.jpg"
+                   alt="Artwork showcase">
+
+              <div class="card-overlay">
+
+                <span class="project-tag showcase">
+                  Showcase
+                </span>
+
+                <h3>
+                  Perspective Drawings / Artwork
+                </h3>
+
+                <button class="archive-button open-gallery"
+                        data-gallery="art-gallery">
+
+                  <i class="bi bi-images"></i>
+
+                  <span>
+                    View Gallery
+                  </span>
+
+                </button>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+        <div class="scroll-indicator up">
+          <i class="bi bi-chevron-up"></i>
+        </div>
+
+        <div class="section-divider divider-blue"></div>
+
+      </section>
+
+    </article>
+
+    <!-- =========================================
+         GALLERY MODAL
+    ========================================= -->
+
+    <div class="gallery-modal"
+         id="gallery-modal">
+
+      <!-- BACKDROP -->
+
+      <div class="gallery-backdrop"></div>
+
+      <!-- CONTENT -->
+
+      <div class="gallery-content">
+
+        <!-- CLOSE -->
+
+        <button class="gallery-close">
+
+          <i class="bi bi-x-lg"></i>
+
+        </button>
+
+        <!-- IMAGE -->
+
+        <img id="gallery-image"
+             src=""
+             alt="Gallery image">
+
+        <!-- NAV -->
+
+        <button class="gallery-nav prev-gallery">
+
+          <i class="bi bi-arrow-left"></i>
+
+        </button>
+
+        <button class="gallery-nav next-gallery">
+
+          <i class="bi bi-arrow-right"></i>
+
+        </button>
+
+        <!-- THUMBS -->
+
+        <div class="gallery-thumbs"></div>
+
+      </div>
+
+    </div>
+
+    <!-- =========================================
+         PORTFOLIO SCRIPT [SPLIT FROM THE HEADER SCRIPT TO HELP WITH ORGANISATION AND QUICKER ADJUSTMENTS TO PROJECTS]
+    ========================================= -->
+
+    <script>
+
+        /* =========================================
+           PROJECT DATA
+        ========================================= */
+
+        /* Stores all information related
+           to the featured project */
+        const project = {
+
+          title: "TypeDuel",
+
+          description:
+            "A competitive based typing game, developed in the Godot Engine.",
+
+          skills: [
+
+            "Pixel Art inspired assets and animations built from the ground up",
+            "Attentive detail towards unique UI/UX visualisation",
+            "Gameplay configured for Multiplayer purposes"
+
+          ],
+
+          tools: [
+
+            "Godot Engine (GD Script)",
+            "Blender: 3D Modelling and Texturing",
+            "Aseprite: Character/Environment design and Animation Work"
+
+          ],
+
+          media: [
+
+            {
+              type: "video",
+              src: "videos/active-project-hero.webm"
+            },
+
+            {
+              type: "image",
+              src: "images/active-project-b.png"
+            },
+
+            {
+              type: "image",
+              src: "images/active-project-c.png"
+            },
+
+            {
+              type: "image",
+              src: "images/active-project-d.png"
+            }
+
+          ]
+
+        };
+
+        /* =========================================
+           GALLERY DATA
+        ========================================= */
+
+        const galleries = {
+
+          "env-gallery": [
+
+            "images/gallery-a-1.jpg",
+            "images/gallery-a-2.jpg",
+            "images/gallery-a-3.jpg",
+            "images/gallery-a-4.jpg",
+            "images/gallery-a-5.jpg"
+
+          ],
+
+          "lec-gallery": [
+
+            "images/gallery-b-1.jpg",
+            "images/gallery-b-2.jpg",
+            "images/gallery-b-3.jpg",
+            "images/gallery-b-4.jpg",
+
+          ],
+
+          "art-gallery": [
+
+            "images/gallery-c-1.jpg",
+            "images/gallery-c-2.jpg",
+            "images/gallery-c-3.jpg",
+            "images/gallery-c-4.jpg",
+            "images/gallery-c-5.jpg"
+
+          ]
+
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+          /* =========================================
+             ELEMENTS
+          ========================================= */
+
+          const menuShell =
+            document.querySelector('.menu-shell');
+
+          const scrollWrapper =
+            document.querySelector('.scroll-wrapper');
+
+          const sections =
+            document.querySelectorAll('.scroll-section');
+
+          let currentIndex = 0;
+
+          const featuredVideo =
+            document.getElementById('featured-video');
+
+          const featuredImage =
+            document.getElementById('featured-image');
+
+          const title =
+            document.getElementById('project-title');
+
+          const description =
+            document.getElementById('project-description');
+
+          const skills =
+            document.getElementById('project-skills');
+
+          const tools =
+            document.getElementById('project-tools');
+
+          const thumbs =
+            document.querySelectorAll('.thumb');
+
+          const nextButton =
+            document.querySelector('.next');
+
+          const prevButton =
+            document.querySelector('.prev');
+
+          /* =========================================
+             STATIC CONTENT
+          ========================================= */
+
+          title.textContent =
+            project.title;
+
+          description.textContent =
+            project.description;
+
+          skills.innerHTML = '';
+
+          project.skills.forEach(skill => {
+
+            const li =
+              document.createElement('li');
+
+            li.textContent = skill;
+
+            skills.appendChild(li);
+
+          });
+
+          tools.innerHTML = '';
+
+          project.tools.forEach(tool => {
+
+            const li =
+              document.createElement('li');
+
+            li.textContent = tool;
+
+            tools.appendChild(li);
+
+          });
+
+          /* =========================================
+             GALLERY MODAL
+          ========================================= */
+
+          const modal =
+            document.getElementById('gallery-modal');
+
+          const galleryImage =
+            document.getElementById('gallery-image');
+
+          const galleryThumbs =
+            document.querySelector('.gallery-thumbs');
+
+          const closeGallery =
+            document.querySelector('.gallery-close');
+
+          const openButtons =
+            document.querySelectorAll('.open-gallery');
+
+          const nextGallery =
+            document.querySelector('.next-gallery');
+
+          const prevGallery =
+            document.querySelector('.prev-gallery');
+
+          let activeGallery = [];
+
+          let galleryIndex = 0;
+
+          /* =========================================
+             OPEN GALLERY
+          ========================================= */
+
+          openButtons.forEach(button => {
+
+            button.addEventListener('click', () => {
+
+              const galleryName =
+                button.dataset.gallery;
+
+              activeGallery =
+                galleries[galleryName];
+
+              galleryIndex = 0;
+
+              buildGallery();
+
+              modal.classList.add('active');
+
+            });
+
+          });
+
+          /* =========================================
+             BUILD GALLERY
+          ========================================= */
+
+          /* Creates the current gallery image
+             and thumbnail list */
+          function buildGallery() {
+
+            /* Set featured gallery image */
+            galleryImage.src =
+              activeGallery[galleryIndex];
+
+            /* Clear existing thumbnails */
+            galleryThumbs.innerHTML = '';
+
+            /* Create thumbnail for each image */
+            activeGallery.forEach((image, index) => {
+
+              const thumb =
+                document.createElement('img');
+
+              thumb.src = image;
+
+              /* Highlight active thumbnail */
+              thumb.classList.toggle(
+                'active',
+                index === galleryIndex
+              );
+
+              /* Clicking thumbnail changes image */
+              thumb.addEventListener('click', () => {
+
+                galleryIndex = index;
+
+                buildGallery();
+
+              });
+
+              /* Add thumbnail to container */
+              galleryThumbs.appendChild(thumb);
+
+            });
+
+          }
+
+          /* =========================================
+             NEXT GALLERY IMAGE
+          ========================================= */
+
+          nextGallery.addEventListener('click', () => {
+
+            galleryIndex++;
+
+            /* Loop back to beginning */
+            if (galleryIndex >= activeGallery.length) {
+
+              galleryIndex = 0;
+
+            }
+
+            buildGallery();
+
+          });
+
+          /* =========================================
+             PREVIOUS GALLERY IMAGE
+          ========================================= */
+
+          prevGallery.addEventListener('click', () => {
+
+            galleryIndex--;
+
+            /* Loop to end if below zero */
+            if (galleryIndex < 0) {
+
+              galleryIndex =
+                activeGallery.length - 1;
+
+            }
+
+            buildGallery();
+
+          });
+
+          /* =========================================
+             CLOSE GALLERY
+          ========================================= */
+
+          /* Close when pressing close button */
+          closeGallery.addEventListener('click', () => {
+
+            modal.classList.remove('active');
+
+          });
+
+          /* Close when clicking background */
+          document.querySelector('.gallery-backdrop')
+            .addEventListener('click', () => {
+
+              modal.classList.remove('active');
+
+          });
+
+          /* =========================================
+             MEDIA SWITCHING
+          ========================================= */
+
+          /* Updates featured media area */
+          function updateMedia(index) {
+
+            /* Get selected media item */
+            const item =
+              project.media[index];
+
+            /* Update active thumbnail styling */
+            thumbs.forEach((thumb, i) => {
+
+              thumb.classList.toggle(
+                'active',
+                i === index
+              );
+
+            });
+
+            /* =========================================
+               VIDEO MODE
+            ========================================= */
+
+            if (item.type === 'video') {
+
+              /* Show video */
+              featuredVideo.style.display =
+                'block';
+
+              /* Hide image */
+              featuredImage.style.display =
+                'none';
+
+              /* Update video source */
+              const source =
+                featuredVideo.querySelector('source');
+
+              source.src =
+                item.src;
+
+              /* Reload and play video */
+              featuredVideo.load();
+
+              featuredVideo.play();
+
+            }
+
+            /* =========================================
+               IMAGE MODE
+            ========================================= */
+
+            else {
+
+              /* Stop playing video */
+              featuredVideo.pause();
+
+              /* Hide video */
+              featuredVideo.style.display =
+                'none';
+
+              /* Show image */
+              featuredImage.style.display =
+                'block';
+
+              /* Set image source */
+              featuredImage.src =
+                item.src;
+
+            }
+
+          }
+
+          /* =========================================
+             NEXT MEDIA
+          ========================================= */
+
+          nextButton.addEventListener('click', () => {
+
+            currentIndex++;
+
+            /* Loop to beginning */
+            if (currentIndex >= project.media.length) {
+
+              currentIndex = 0;
+
+            }
+
+            updateMedia(currentIndex);
+
+          });
+
+          /* =========================================
+             PREVIOUS MEDIA
+          ========================================= */
+
+          prevButton.addEventListener('click', () => {
+
+            currentIndex--;
+
+            /* Loop to end */
+            if (currentIndex < 0) {
+
+              currentIndex =
+                project.media.length - 1;
+
+            }
+
+            updateMedia(currentIndex);
+
+          });
+
+          /* =========================================
+             THUMBNAIL CONTROLS
+          ========================================= */
+
+          thumbs.forEach((thumb, index) => {
+
+            thumb.addEventListener('click', () => {
+
+              /* Set selected media */
+              currentIndex = index;
+
+              updateMedia(currentIndex);
+
+            });
+
+          });
+
+          /* =========================================
+             INITIAL LOAD
+          ========================================= */
+
+          /* Load first media item */
+          updateMedia(currentIndex);
+
+          /* =========================================
+             FADE-IN ANIMATIONS
+          ========================================= */
+
+          /* Observe elements entering viewport */
+          const observer =
+            new IntersectionObserver((entries) => {
+
+              entries.forEach(entry => {
+
+                /* Add visible class when entering */
+                if (entry.isIntersecting) {
+
+                  entry.target.classList.add('visible');
+
+                }
+
+                /* Remove when leaving */
+                else {
+
+                  entry.target.classList.remove('visible');
+
+                }
+
+              });
+
+            }, {
+
+              /* Trigger when 20% visible */
+              threshold: 0.2
+
+            });
+
+          /* Observe all fade-in elements */
+          document.querySelectorAll('.fade-in')
+            .forEach(el => {
+
+              observer.observe(el);
+
+            });
+
+          /* =========================================
+             NAV SHRINK EFFECT
+          ========================================= */
+
+          /* Shrinks navbar after scrolling */
+          function updateNav() {
+
+            const scrolled =
+              scrollWrapper.scrollTop > 80;
+
+            menuShell.classList.toggle(
+              'scrolled',
+              scrolled
+            );
+
+          }
+
+          /* Listen for scrolling */
+          scrollWrapper.addEventListener(
+            'scroll',
+            updateNav,
+            { passive: true }
+          );
+
+          /* Run immediately on page load */
+          updateNav();
+
+          /* =========================================
+             THEME SWITCHING
+          ========================================= */
+
+          /* Detects closest section and changes
+             navbar theme accordingly */
+          function updateTheme() {
+
+            const wrapperRect =
+              scrollWrapper.getBoundingClientRect();
+
+            let closestSection = null;
+
+            let smallestDistance =
+              Infinity;
+
+            sections.forEach(section => {
+
+              const rect =
+                section.getBoundingClientRect();
+
+              const distance =
+                Math.abs(
+                  rect.top - wrapperRect.top
+                );
+
+              /* Store closest section */
+              if (distance < smallestDistance) {
+
+                smallestDistance = distance;
+
+                closestSection = section;
+
+              }
+
+            });
+
+            if (!closestSection) return;
+
+            /* Reset navbar theme */
+            menuShell.classList.remove(
+              'light-ui'
+            );
+
+            /* Apply light UI if section is dark */
+            if (
+              closestSection.classList.contains(
+                'theme-dark'
+              )
+            ) {
+
+              menuShell.classList.add(
+                'light-ui'
+              );
+
+            }
+
+          }
+
+          /* =========================================
+             THROTTLED SCROLL EVENTS
+          ========================================= */
+
+          /* Prevents excessive updates */
+          let ticking = false;
+
+          scrollWrapper.addEventListener(
+            'scroll',
+            () => {
+
+              if (!ticking) {
+
+                /* Sync updates with browser rendering */
+                requestAnimationFrame(() => {
+
+                  updateTheme();
+
+                  ticking = false;
+
+                });
+
+                ticking = true;
+
+              }
+
+            },
+            { passive: true }
+          );
+
+          /* Run once immediately */
+          updateTheme();
+
+        });
+
+    </script>
+
+  </body>
+  
+</html>

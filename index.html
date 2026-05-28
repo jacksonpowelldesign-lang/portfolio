@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Portfolio Site</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <script src="https://kit.fontawesome.com/d34125b423.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rosarivo:ital@0;1&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet" />
+
+    <link href="styles.css" rel="stylesheet" />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        
+        /* =========================================
+           SELECT PAGE ELEMENTS
+        ========================================= */
+
+        /* Navigation */
+        const menuShell = document.querySelector(".menu-shell");
+
+        /* Main Scroll */
+        const scrollWrapper = document.querySelector(".scroll-wrapper");
+
+        /* Every Scroll Section */
+        const sections = document.querySelectorAll(".scroll-section");
+
+        /* Return the script if any element is missing */
+        if (!menuShell || !scrollWrapper || !sections.length) return;
+        
+        /* =========================================
+           NAVBAR SHRINK EFFECT
+        ========================================= */
+
+        /* When the user has scroll down enough, shrink the social icons into the navbar */
+        const updateNav = () => {
+          const scrolled = scrollWrapper.scrollTop > 80; /* Scroll position is set to 80px */
+          menuShell.classList.toggle("scrolled", scrolled);
+        };
+
+        scrollWrapper.addEventListener("scroll", updateNav, { passive: true });
+
+        updateNav();
+
+        /* =========================================
+           ACTIVE SECTION / THEME DETECTION
+        ========================================= */
+
+        /* Checks to see which current section is top of the viewport. */
+        function updateTheme() {
+          const wrapperRect = scrollWrapper.getBoundingClientRect();
+          let closestSection = null;
+          let smallestDistance = Infinity;
+          sections.forEach((section) => {
+            /* Get current section position */
+            const rect = section.getBoundingClientRect();
+
+            const distance = Math.abs(rect.top - wrapperRect.top);
+
+            if (distance < smallestDistance) {
+              smallestDistance = distance;
+              closestSection = section;
+            }
+          });
+
+          if (!closestSection) return;
+
+          menuShell.classList.remove("light-ui");
+
+          if (closestSection.classList.contains("theme-dark")) {
+            menuShell.classList.add("light-ui");
+          }
+        }
+
+        /* =========================================
+           SCROLL THROTTLING
+        ========================================= */
+
+        /* Prevents updateTheme() from running too many times per frame */
+        let ticking = false;
+
+        scrollWrapper.addEventListener(
+          "scroll",
+          () => {
+            if (!ticking) {
+              window.requestAnimationFrame(() => {
+                updateTheme();
+
+                ticking = false;
+              });
+
+              ticking = true;
+            }
+          },
+          { passive: true }
+        );
+
+        updateTheme();
+
+        /* =========================================
+           FADE-IN SECTION ANIMATIONS
+        ========================================= */
+
+        /* Checks to see elements enter the viewport, if element is visible then trigger the fade-in */
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              } else {
+                entry.target.classList.remove("visible");
+              }
+            });
+          },
+          {
+            threshold: 0.3
+          }
+        );
+
+        document.querySelectorAll(".fade-in").forEach((el) => {
+          observer.observe(el);
+        });
+
+        /* =========================================
+           SHOWCASE SLIDER
+        ========================================= */
+
+        /* For SECTION ONE: Portfolio Showcase, have a rotating set of slides */
+
+        const slides = document.querySelectorAll(".slide");
+
+        let currentSlide = 0;
+
+        if (slides.length > 0) {
+          /* Change slides every 3.5 seconds */
+          setInterval(() => {
+            slides[currentSlide].classList.remove("active");
+
+            currentSlide = (currentSlide + 1) % slides.length;
+
+            slides[currentSlide].classList.add("active");
+          }, 3500);
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- NAVBAR [Social Icons and Hamburger Menu] -->
+
+    <nav class="navbar navbar-dark fixed-top">
+      <div class="menu-shell">
+        <!-- Check if the user clicked on the hamburger to activate fixed nav menu and menu overlay -->
+
+        <input type="checkbox" id="menu-toggle" />
+
+        <!-- SOCIAL ICONS / HAMBURGER -->
+
+        <div class="social-icons">
+          <label for="menu-toggle" class="hamburger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <a href="https://www.instagram.com/powelljo.99/">
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/jacksonpowell-design/">
+            <i class="bi bi-linkedin"></i>
+          </a>
+
+          <a href="https://jopowelldesign.itch.io">
+            <i class="fa-brands fa-itch-io" style="color: #dce8f2; font-size: 1.6rem"></i>
+          </a>
+        </div>
+
+        <!-- MENU OVERLAY (Darken Background Elements with the exception of the NavMenu) -->
+
+        <label for="menu-toggle" class="menu-overlay"></label>
+
+        <!-- NAVBAR MENU -->
+
+        <nav class="menu-panel">
+          <a href="index.html" class="nav-link py-2"> Home </a>
+
+          <a href="portfolio.html" class="nav-link py-2"> Portfolio </a>
+
+          <a href="about.html" class="nav-link py-2"> About Me</a>
+
+          <a href="contact.html" class="nav-link py-2"> Contact </a>
+        </nav>
+      </div>
+    </nav>
+
+    <!-- =========================================
+         SCROLL WRAPPER
+    ========================================= -->
+
+    <article class="scroll-wrapper">
+      <!-- HERO SECTION -->
+
+      <section class="scroll-section hero-section theme-light">
+        <!-- HERO IMAGE -->
+
+        <div class="hero-image">
+          <img src="images/hero-image.jpg" alt="Portfolio Hero" />
+        </div>
+
+        <!-- CONTENT -->
+
+        <article class="container hero-content fade-in">
+          <h1 class="page-title home-title">Jackson Powell</h1>
+
+          <p class="lead">Welcome to my showcase of personal and professional work</p>
+        </article>
+
+        <!-- ICON BELOW POINTING DOWN, LETS USERS KNOW THEY CAN SCROLL DOWN TO THE SECTION BELOW -->
+
+        <div class="scroll-indicator down">
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <div class="section-divider divider-index-section-1"></div>
+      </section>
+
+      <!-- FIRST SECTION - PORTFOLIO SHOWCASE -->
+
+      <section class="scroll-section showcase-section theme-dark">
+        <!-- BACKGROUND SLIDES -->
+
+        <div class="showcase-slider">
+          <img src="images/showcase/showcase-a.png" class="slide active" alt="" />
+          <img src="images/showcase/showcase-b.png" class="slide" alt="" />
+          <img src="images/showcase/showcase-c.png" class="slide" alt="" />
+          <img src="images/showcase/showcase-d.png" class="slide" alt="" />
+        </div>
+
+        <!-- OVERLAY -->
+
+        <div class="showcase-overlay"></div>
+
+        <!-- CONTENT -->
+
+        <div class="showcase-content fade-in">
+          <p class="section-label">Selected Work</p>
+
+          <h2 class="page-title">Portfolio Showcase</h2>
+
+          <p class="showcase-copy">
+            Games, interface design, cinematic presentation, interaction systems, and experimental digital work.
+          </p>
+
+          <a href="portfolio.html" class="hero-button"> View Portfolio </a>
+        </div>
+
+        <div class="scroll-indicator up">
+          <i class="bi bi-chevron-up"></i>
+        </div>
+
+        <div class="scroll-indicator down">
+          <i class="bi bi-chevron-down"></i>
+        </div>
+
+        <div class="section-divider divider-index-section-2"></div>
+      </section>
+
+      <!-- SECOND SECTION: ABOUT SHOWCASE-->
+
+      <section class="scroll-section about-preview theme-light">
+        <!-- IMAGE -->
+
+        <div class="about-preview-image">
+          <img src="images/showcase/about-preview.png" alt="" />
+        </div>
+
+        <!-- CONTENT -->
+
+        <div class="about-preview-content fade-in">
+          <p class="section-label">About Me</p>
+
+          <h2 class="page-title">Hi, I'm Jackson</h2>
+
+          <p>A passion-filled 3D designer and game artist.</p>
+
+          <div class="preview-buttons">
+            <a href="about.html" class="hero-button light"> Find Out More </a>
+
+            <a href="contact.html" class="hero-button outline"> Contact </a>
+          </div>
+        </div>
+
+        <div class="scroll-indicator up">
+          <i class="bi bi-chevron-up"></i>
+        </div>
+      </section>
+    </article>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
